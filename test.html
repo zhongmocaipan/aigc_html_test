@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三星堆藏品展示</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .item {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .item img {
+            max-width: 100px;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        .item img.nitian-img {
+            max-width: 200px; /* 设置拟人图片的宽度 */
+            height: auto; /* 让高度按比例自动调整 */
+        }
+        .item p {
+            display: none;
+        }
+        .dynasty {
+            font-style: italic;
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>镜子藏品展示</h1>
+    </header>
+    <div class="container">
+        <div class="item" onclick="toggleDescription(1)">
+            <img src="./img/唐镜1.png" alt="高士宴乐纹嵌螺钿铜镜">
+            <div>
+                <h2>高士宴乐纹嵌螺钿铜镜</h2>
+                <div class="dynasty">唐朝</div>
+                <p style="display:none;">高士宴乐纹嵌螺钿铜镜，1955年河南洛阳唐墓出士此镜镜背嵌螺钿刻画人物、树木、鸟鹊等。钮上方一株花树，树两侧各一振翅翘尾的鹦鹉。钮左侧端坐一人，手弹阮咸(古代弹拨乐器一种，由汉代乐师改良加工，又称“秦琵琶”或“汉琵琶”，因魏晋时期高士阮咸善弹而得名);右侧坐一人，手弹阮咸(古代弹拨乐器一种，由汉代乐师改良加工，又称“秦琵琶”或“汉琵琶”，因魏晋时期高士阮咸善弹而得名);右侧坐一人，手持酒盅，面前一鼎一壶，背后立一女侍，双手捧盒。钮下有仙鹤、水池，池内和池边有嬉戏的鹦鹉。</p>
+                <img src="./img/唐镜1_拟人.jpg" alt="高士宴乐纹嵌螺钿铜镜详情" class="nitian-img" style="display:none;">
+                <img src="./img/唐镜1.png" alt="高士宴乐纹嵌螺钿铜镜" style="display:none;">
+            </div>
+        </div>
+        <div class="item" onclick="toggleDescription(2)">
+            <img src="./img/唐镜2.png" alt="羽人花鸟金银平脱铜镜">
+            <div>
+                <h2>羽人花鸟金银平脱铜镜</h2>
+                <div class="dynasty">唐朝</div>
+                <p style="display:none;">羽人花鸟金银平脱铜镜，传河南郑州出土，此镜八出葵花形，圆钮，重瓣莲花钮座，钮座银质嵌金，窄平缘。镜背主装饰区内侧绕钮有银质较大的蜂蝶花卉和嵌金较小的鸟鹊错落分布。外侧为银质的双飞仙和双凤鸟间隔沿镜缘飞翔，其间点缀金色的祥云、鸟鹊和花叶。</p>
+                <img src="./img/唐镜2_拟人.jpg" alt="羽人花鸟金银平脱铜镜详情" class="nitian-img" style="display:none;">
+                <img src="./img/唐镜2.png" alt="羽人花鸟金银平脱铜镜" style="display:none;">
+            </div>
+        </div>
+        <!-- 在这里添加更多的藏品项目 -->
+    </div>
+
+    <script>
+        function toggleDescription(id) {
+            var descriptions = document.querySelectorAll('.item div p');
+            var images = document.querySelectorAll('.item div img');
+            descriptions.forEach(function(desc) {
+                desc.style.display = 'none';
+            });
+            images.forEach(function(img) {
+                img.style.display = 'none';
+            });
+            var selectedDescription = document.querySelector('.item:nth-child(' + id + ') div p');
+            var selectedImage = document.querySelector('.item:nth-child(' + id + ') div img');
+            selectedDescription.style.display = 'block';
+            selectedImage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
