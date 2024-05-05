@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>三星堆藏品展示</title>
+    <title>古镜</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -24,21 +24,22 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.4); /* 80% 的不透明度 */
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .item {
             margin-bottom: 20px;
             padding: 10px;
-            background-color: #f9f9f9;
+            background-color: rgba(249, 249, 249, 0.8); /* 80% 的不透明度 */
             border-radius: 5px;
             cursor: pointer;
             display: flex;
             align-items: center;
             text-align: left; /* 文字靠左对齐 */
         }
+
 
         .item img {
             max-width: 100px;
@@ -73,7 +74,10 @@
             margin-right: 20px;
             text-decoration: none;
             font-size: 16px;
+            font-family: LiSu, sans-serif; /* 添加字体样式 */
+            font-weight: bold; /* 添加字体粗细 */
         }
+
 
         /* 调整栏目1至4的样式 */
         nav a:nth-child(-n+4) {
@@ -87,10 +91,10 @@
     </header>
 
     <nav>
-        <a href="#" onclick="scrollToTarget(1)">栏目1</a>
-        <a href="#" onclick="scrollToTarget(5)">栏目2</a>
-        <a href="#" onclick="scrollToTarget(7)">栏目3</a>
-        <a href="#" onclick="scrollToTarget(9)">栏目4</a>
+        <a href="#" onclick="scrollToTarget(1)">鉴于止水</a>
+        <a href="#" onclick="scrollToTarget(5)">湅治铜华</a>
+        <a href="#" onclick="scrollToTarget(7)">清质昭明</a>
+        <a href="#" onclick="scrollToTarget(9)">清光宜远</a>
     </nav>
 
     <div class="container">
