@@ -9,7 +9,10 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f2f2f2;
+            background-image: url('./img/bg/bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
         header {
             background-color: #333;
@@ -21,21 +24,22 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.4); /* 80% 的不透明度 */
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .item {
             margin-bottom: 20px;
             padding: 10px;
-            background-color: #f9f9f9;
+            background-color: rgba(249, 249, 249, 0.8); /* 80% 的不透明度 */
             border-radius: 5px;
             cursor: pointer;
             display: flex;
             align-items: center;
             text-align: left; /* 文字靠左对齐 */
         }
+
 
         .item img {
             max-width: 100px;
