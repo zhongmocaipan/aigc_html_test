@@ -84,10 +84,10 @@
     </header>
 
     <nav>
-        <a href="#" onclick="toggleDescriptionRange(1,3)">栏目1</a>
-        <a href="#" onclick="toggleDescriptionRange(4, 6)">栏目2</a>
-        <a href="#" onclick="toggleDescriptionRange(7, 9)">栏目3</a>
-        <a href="#" onclick="toggleDescriptionRange(10, 11)">栏目4</a>
+        <a href="#" onclick="scrollToTarget(1)">栏目1</a>
+        <a href="#" onclick="scrollToTarget(5)">栏目2</a>
+        <a href="#" onclick="scrollToTarget(7)">栏目3</a>
+        <a href="#" onclick="scrollToTarget(9)">栏目4</a>
     </nav>
 
     <div class="container">
@@ -221,12 +221,19 @@
             // 自动滚动至该介绍框
             selectedDescription.scrollIntoView({ behavior: 'smooth' });
         }
-
-        function toggleDescriptionRange(start, end) {
-            for (var i = start; i <= end; i++) {
-                toggleDescription(i);
-            }
+    
+        function scrollToTarget(id) {
+            // 获取目标模块的位置
+            var targetElement = document.querySelector('.item:nth-child(' + id + ')');
+            var targetPosition = targetElement.offsetTop;
+    
+            // 滚动到目标位置
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
         }
     </script>
+    
 </body>
 </html>
