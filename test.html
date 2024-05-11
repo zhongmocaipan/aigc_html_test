@@ -6,83 +6,122 @@
     <title>古镜</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('./img/bg/bg.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.4); /* 80% 的不透明度 */
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('./img/bg/bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 
-        .item {
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: rgba(249, 249, 249, 0.8); /* 80% 的不透明度 */
-            border-radius: 5px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            text-align: left; /* 文字靠左对齐 */
-        }
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
 
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.4); /* 80% 的不透明度 */
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-        .item img {
-            max-width: 100px;
-            margin-right: 20px;
-            border-radius: 5px;
-        }
-        .item img.nitian-img {
-            max-width: 200px;
-            height: auto;
-        }
-        .item p {
-            display: none;
-        }
-        .dynasty {
-            font-style: italic;
-            font-size: 14px;
-            color: #666;
-            margin-top: 5px;
-        }
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            padding: 10px 20px;
-            z-index: 1000;
-            text-align: center; /* 居中显示 */
-        }
-        nav a {
-            color: #fff;
-            margin-right: 20px;
-            text-decoration: none;
-            font-size: 16px;
-            font-family: LiSu, sans-serif; /* 添加字体样式 */
-            font-weight: bold; /* 添加字体粗细 */
-        }
+    .item {
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: rgba(249, 249, 249, 0.8); /* 80% 的不透明度 */
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        text-align: left; /* 文字靠左对齐 */
+    }
 
+    .item img {
+        max-width: 100px;
+        margin-right: 20px;
+        border-radius: 5px;
+    }
 
-        /* 调整栏目1至4的样式 */
-        nav a:nth-child(-n+4) {
-            font-size: 20px; /* 调整字体大小 */
-        }
+    .item img.nitian-img {
+        max-width: 200px;
+        height: auto;
+    }
+
+    .dynasty {
+        font-style: italic;
+        font-size: 14px;
+        color: #666;
+        margin-top: 5px;
+    }
+
+    .item {
+        display: flex;
+        align-items: center; /* 垂直居中对齐 */
+    }
+
+    .text-container {
+        flex: 1; /* 让文本占据剩余空间 */
+    }
+
+    .text-container > div {
+        padding-right: 20px; /* 文本和图片之间的间距 */
+    }
+
+    .item img {
+        max-width: 100px; /* 设置图片最大宽度 */
+        margin-right: 20px; /* 图片右侧留白 */
+    }
+    /* 将文字和图片放在同一个容器内，并使用 flex 布局使它们水平排列 */
+    .item .nitian-img-container {
+        display: flex;
+        flex-direction: row-reverse; /* 反向排列，文字在图片右侧 */
+        align-items: center; /* 垂直居中对齐 */
+    }
+
+    /* 设置拟人图片的样式 */
+    .item .nitian-img-container img {
+        max-width: 200px; /* 图片最大宽度 */
+        height: auto; /* 根据比例调整高度 */
+        margin-left: 20px; /* 图片和文字之间的间距 */
+    }
+
+    /* 显示介绍文字 */
+    .item .nitian-img-container p {
+        display: block;
+        max-width: 60%; /* 限制文字宽度 */
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 20px;
+        z-index: 1000;
+        text-align: center; /* 居中显示 */
+    }
+
+    nav a {
+        color: #fff;
+        margin-right: 20px;
+        text-decoration: none;
+        font-size: 16px;
+        font-family: LiSu, sans-serif; /* 添加字体样式 */
+        font-weight: bold; /* 添加字体粗细 */
+    }
+
+    /* 调整栏目1至4的样式 */
+    nav a:nth-child(-n+4) {
+        font-size: 20px; /* 调整字体大小 */
+    }
+
     </style>
 </head>
 <body>
@@ -103,19 +142,22 @@
             <div>
                 <h2>高士宴乐纹嵌螺钿铜镜</h2>
                 <div class="dynasty">唐朝</div>
-                <p style="display:none;">高士宴乐纹嵌螺钿铜镜，1955年河南洛阳唐墓出士此镜镜背嵌螺钿刻画人物、树木、鸟鹊等。钮上方一株花树，树两侧各一振翅翘尾的鹦鹉。钮左侧端坐一人，手弹阮咸(古代弹拨乐器一种，由汉代乐师改良加工，又称“秦琵琶”或“汉琵琶”，因魏晋时期高士阮咸善弹而得名);右侧坐一人，手弹阮咸(古代弹拨乐器一种，由汉代乐师改良加工，又称“秦琵琶”或“汉琵琶”，因魏晋时期高士阮咸善弹而得名);右侧坐一人，手持酒盅，面前一鼎一壶，背后立一女侍，双手捧盒。钮下有仙鹤、水池，池内和池边有嬉戏的鹦鹉。</p>
-                <img src="./img/铜镜的制作流通/高士宴乐纹嵌螺钿铜镜_拟人.jpg" alt="高士宴乐纹嵌螺钿铜镜详情" class="nitian-img" style="display:none;">
-                <img src="./img/铜镜的制作流通/高士宴乐纹嵌螺钿铜镜.png" alt="高士宴乐纹嵌螺钿铜镜" style="display:none;">
+                <div class="nitian-img-container">
+                    <img src="./img/铜镜的制作流通/高士宴乐纹嵌螺钿铜镜_拟人.jpg" alt="高士宴乐纹嵌螺钿铜镜详情">
+                    <p>高士宴乐纹嵌螺钿铜镜，1955年河南洛阳唐墓出士此镜镜背嵌螺钿刻画人物、树木、鸟鹊等。钮上方一株花树，树两侧各一振翅翘尾的鹦鹉。钮左侧端坐一人，手弹阮咸(古代弹拨乐器一种，由汉代乐师改良加工，又称“秦琵琶”或“汉琵琶”，因魏晋时期高士阮咸善弹而得名);右侧坐一人，手弹阮咸(古代弹拨乐器一种，由汉代乐师改良加工，又称“秦琵琶”或“汉琵琶”，因魏晋时期高士阮咸善弹而得名);右侧坐一人，手持酒盅，面前一鼎一壶，背后立一女侍，双手捧盒。钮下有仙鹤、水池，池内和池边有嬉戏的鹦鹉。</p>
+                </div>
             </div>
         </div>
+        
+        
         <div class="item" onclick="toggleDescription(2)">
             <img src="./img/铜镜的制作流通/羽人花鸟金银平脱铜镜.png" alt="羽人花鸟金银平脱铜镜">
             <div>
                 <h2>羽人花鸟金银平脱铜镜</h2>
                 <div class="dynasty">唐朝</div>
+                <div class="nitian-img-container"></div>
                 <p style="display:none;">羽人花鸟金银平脱铜镜，传河南郑州出土，此镜八出葵花形，圆钮，重瓣莲花钮座，钮座银质嵌金，窄平缘。镜背主装饰区内侧绕钮有银质较大的蜂蝶花卉和嵌金较小的鸟鹊错落分布。外侧为银质的双飞仙和双凤鸟间隔沿镜缘飞翔，其间点缀金色的祥云、鸟鹊和花叶。</p>
                 <img src="./img/铜镜的制作流通/羽人花鸟金银平脱铜镜_拟人.jpg" alt="羽人花鸟金银平脱铜镜详情" class="nitian-img" style="display:none;">
-                <img src="./img/铜镜的制作流通/羽人花鸟金银平脱铜镜.png" alt="羽人花鸟金银平脱铜镜" style="display:none;">
             </div>
         </div>
         <div class="item" onclick="toggleDescription(3)">
@@ -205,6 +247,16 @@
                 <div class="dynasty">明代</div>
                 <p style="display:none;">云龙纹菱式铜镜。此镜为八出菱花形，镜背素地。主体纹饰为一浮雕的蟠龙，绕钮而置，首尾相接，顾首，口对钮珠，大口张开作吞珠状，凶猛威严，具有典型的明代龙纹的特点。隙间饰以云纹。此镜制作规整，纹饰舒朗美观。</p>
                 <img src="./img/5.11/文物拟人。云龙纹菱式铜镜。此镜为八出菱花 (1).jpg" alt="羽人花鸟金银平脱铜镜详情" class="nitian-img" style="display:none;">
+                <img src="./img/铜镜的制作流通/羽人花鸟金银平脱铜镜.png" alt="羽人花鸟金银平脱铜镜" style="display:none;">
+            </div>
+        </div>
+        <div class="item" onclick="toggleDescription(12)">
+            <img src="./img/铜/屏幕截图 2024-05-11 224837.png" alt="“承安二年”吴牛喘月故事铜镜">
+            <div>
+                <h2>“承安二年”吴牛喘月故事铜镜</h2>
+                <div class="dynasty">明代</div>
+                <p style="display:none;">吴牛喘月镜是金代人物故事镜中最常见的图案之一，主要流行于金世宗大定至金章宗明昌、承安年间。此镜上部为天空，饰云托月，下部为波涛起伏的河水，洲上卧一牛，翘首望月。金代的“吴牛喘月”纹样还见于定窑、耀州窑生产的瓷器上。</p>
+                <img src="./img/5.11/文物拟人。吴牛喘月镜是金代人物故事镜中最.jpg" alt="羽人花鸟金银平脱铜镜详情" class="nitian-img" style="display:none;">
                 <img src="./img/铜镜的制作流通/羽人花鸟金银平脱铜镜.png" alt="羽人花鸟金银平脱铜镜" style="display:none;">
             </div>
         </div>
