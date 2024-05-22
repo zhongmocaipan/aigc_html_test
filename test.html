@@ -125,8 +125,12 @@
     </style>
 </head>
 <body>
+    <audio autoplay>
+        <source src="./misic/1.15.明鏡止水.wav" type="audio/mpeg">
+        您的浏览器不支持 audio 标签。
+    </audio>
     <header>
-        <h1>镜子藏品展示</h1>
+        <h1>文物藏品展示</h1>
     </header>
 
     <nav>
@@ -135,7 +139,7 @@
         <a href="#" onclick="scrollToTarget(7)">清质昭明</a>
         <a href="#" onclick="scrollToTarget(9)">清光宜远</a>
     </nav>
-
+    
     <div class="container">
         <div class="item" onclick="toggleDescription(1)">
             <img src="./img/铜镜的制作流通/高士宴乐纹嵌螺钿铜镜.png" alt="高士宴乐纹嵌螺钿铜镜">
@@ -276,6 +280,7 @@
     </div>
 
     <script>
+        
         function toggleDescription(id) {
             var descriptions = document.querySelectorAll('.item div p');
             var images = document.querySelectorAll('.item div img');
